@@ -2,11 +2,11 @@
 require 'spec_helper'
 require "logstash/filters/example"
 
-describe LogStash::Filters::Example do
+describe LogStash::Filters::Redis do
   describe "Set to Hello World" do
     let(:config) do <<-CONFIG
       filter {
-        example {
+        redis {
           message => "Hello World"
         }
       }
